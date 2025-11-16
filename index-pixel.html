@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>像素番茄鐘</title>
+    <link rel="stylesheet" href="style-pixel.css">
+</head>
+<body>
+    <div class="container">
+        <div class="pixel-border">
+            <h1 class="title">🍅 像素番茄鐘</h1>
+            
+            <div class="timer-display">
+                <div class="time" id="time">25:00</div>
+                <div class="mode" id="mode">工作時間</div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-start" id="startBtn">開始</button>
+                <button class="btn btn-pause" id="pauseBtn" style="display:none;">暫停</button>
+                <button class="btn btn-reset" id="resetBtn">重置</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-label">今日番茄</span>
+                    <span class="stat-value" id="tomatoCount">0</span>
+                </div>
+            </div>
+
+            <div class="settings">
+                <button class="btn btn-settings" id="settingsBtn">設定</button>
+            </div>
+        </div>
+
+        <div class="settings-panel" id="settingsPanel" style="display:none;">
+            <div class="pixel-border">
+                <h2>設定</h2>
+                <div class="setting-item">
+                    <label>工作時間（分鐘）</label>
+                    <input type="number" id="workTime" value="25" min="1" max="60">
+                </div>
+                <div class="setting-item">
+                    <label>短休息（分鐘）</label>
+                    <input type="number" id="shortBreak" value="5" min="1" max="30">
+                </div>
+                <div class="setting-item">
+                    <label>長休息（分鐘）</label>
+                    <input type="number" id="longBreak" value="15" min="1" max="60">
+                </div>
+                <button class="btn btn-save" id="saveBtn">儲存</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
